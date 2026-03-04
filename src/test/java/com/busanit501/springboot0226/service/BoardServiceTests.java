@@ -35,4 +35,17 @@ public class BoardServiceTests {
 
     }
 
+    @Test
+    public void testModify() {
+        // 변경할 내용, 일단 디비에서 불러오고, 그리고 내용을 변경해서, 전달.
+        // 처음부터, 102 번호의 엔티티 객체를 이용해도 되고,
+        // 준비물 작업 ) , BoardDTO 준비 하기.
+        // 각자 데이터베이스 데이터 확인 후 , 작업하기. 102L 아닐수 도 있다.
+        BoardDTO boardDTO = boardService.readOne(102L);
+        boardDTO.setTitle("수정 제목 변경 서비스 테스트 ");
+        boardDTO.setContent("수정 내용 변경 서비스 테스트 ");
+        boardService.modify(boardDTO);
+
+    }
+
 }
