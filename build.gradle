@@ -59,8 +59,14 @@ dependencies {
     // 버전이 명시 되지 않는다면, 최신 버전으로 3.4.0
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 
+    // 3
 //순서2 queryDsl
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}:jakarta"
+
+    // 4
+    // 모델 맵퍼, DTO <-> VO 변환 해주는 도구.
+    // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.2.4'
 
 //    순서3 queryDsl
     annotationProcessor(

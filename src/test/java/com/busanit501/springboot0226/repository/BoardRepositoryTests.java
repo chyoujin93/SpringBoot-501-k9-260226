@@ -89,7 +89,7 @@ public class BoardRepositoryTests {
         // 검색, 페이징 처리 ,
         // 준비물 1) 검색 타입 2) 검색어 3) 화면에서 전달받은 페이징 처리 준비물(보기 위한 페이지 번호, 크기 10개)
         String[] types = {"t", "c", "w"};
-        String keyword = "t";
+        String keyword = "오늘";
         Pageable pageable = PageRequest.of(0,10,Sort.by("bno").descending());
         // 메서드에, 준비한 준비물을 대입을 해서, 호출해보기.
         Page<Board> result = boardRepository.searchAll(types,keyword, pageable );
